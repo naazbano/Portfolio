@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="css/animate.css">
+   
+     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: rgb(193, 30, 57);
+}
+.about-info{
+    margin:20px auto;
+    justify-content: space-between;
+    color: #aaa;
+
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Home -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/plogo.png" class="logo"/>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                     <li><a href="#resume">Resume</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav> 
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="header-text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Naaz Bano</span></h1>
+                       <br>
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation" style="font-weight: 700;"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Software Engineer  ',
+						'Web Developer  ',
+						'Problem Solver   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+						<br>
+						<br>
+			            <h2>Software Engineer</h2>
+                        <br>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/naaz-bano-112622294" class="  btn-primary ">LinkedIn</a> 
+                            <br>
+							<a href="https://github.com/naazbano" class="btn-white btn-outline-white ">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	    
+    <!-- About -->
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="about-info">
+                    <img src="images/profileimgs.jpeg">
+										<p><span class="title-s">Name: </span> <span>Naaz Bano</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Software Engineer</span></p>
+										<p><span class="title-s">Experience: </span> <span>Freshers</span></p>
+										<p><span class="title-s">Address: </span> <span>Uttar Pradesh, India</span></p>
+							</div>
+                            <br>		 
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <div class="tab-contents tab-contents active-tab  skill-mf" id="skills">
+                        
+                        <br>
+									<span>SQL</span> <span class="pull-right">90%</span>
+        
+									<div class="progress " id="skills">
+										<div class="progress-bar" id="skills" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>JavaScript</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>C++</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>MongoDB</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>React</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+                                </div>
+                         
+                    </div>
+                    
+                 <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <br>
+                    <p>Passionate Software Engineer with expertise in full-stack development. Skilled in designing scalable web applications using MERN stack. Strong problem-solving abilities, eager to contribute to innovative projects. Experienced in LMS & real-time chat apps, focusing on user-centric solutions and secure authentication.</p>
+
+                     <!-- <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                     </div> -->
+                           <div class="about-info">
+                                   <ul>
+									<li class="d-flex"><span style="color: white; font-weight: 800;">Profile:</span> <span>Software Engineer</span></li>
+                                    <br>
+								
+									<li class="d-flex"><span style="color: white; font-weight: 800; ">Education:</span> <span>Bachelor of Engineering</span></li>
+                                    
+                                    <br>
+									<li class="d-flex"><span style="color: white;  font-weight: 800">Language:</span> <span>English, Hindi</span></li>
+									
+                                    <br>
+									<li class="d-flex"><span style="color: white; font-weight: 800;">Other Skills:</span> <span>HTML, CSS, Node, Git, Express, Talwind</span></li>
+                                    <br>
+                                    
+									<li class="d-flex"><span style="color: white;  font-weight: 800;">Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li>
+									<br>
+        
+								</ul>
+                                </div>
+
+                                <div class="counter-wrap ftco-animate d-flex mt-md-3">
+							  <div class="text">
+								<p class="mb-4">
+									<span class="number" style="color: #ff0464;" >10</span> <span>+</span>
+									<span style="color: white;">&nbsp; Projects completed</span>
+								</p>
+                                <br>
+								<p><a href="https://www.linkedin.com/in/naaz-bano-11262229" class="btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+                                     <div class="tab-contents " id="experience">
+                             <ul>
+                            <li><span>Unified Mentor Internshipt</span><br>Currently Workinng</li>
+           
+                            </ul>
+                        </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br>MCA from APJ Abdul Kalam University Lucknow.</li>
+                            <li><span>2023</span><br>BSC From CSJMU Kanpur.</li>
+                        </ul>
+                     </div> 
+                </div>
+            </div>
+        </div>
+     </div>
+<!----------- Resume---------- -->
+     <div id="resume">
+        <div class="container">
+            <h1 class="sub-title" style="text-align: center;">My Resume</h1>
+            <a href="images/MyCV.pdf" download class="btn btn2">Download CV</a>
+            <p>I am a passionate Full-Stack Developer specializing in the MERN stack, with experience in building scalable and 
+                user-centric applications like LMS, Real-Time Chat App, and Code Editor, always eager to learn, innovate, and solve real-world problems efficiently. 🚀</p>
+                <br>
+			<h1 class="sub-title" style="text-align: center ; color: white;">Experience</h1>
+            </div>
+		</div>
+
+            <div class="services-list">
+                <div>
+                    <span style="color: #ff0464; font-weight: 600;">June(2025)-July(2025)</span>
+                    <br>
+						<h2 style="color: white;">Internship</h2>
+                    <h2>Unified Mentor</h2>
+                    <p class="mt-4">Unified Mentor is a technology consulting and training based firm specializing in IT networking domain to provide solutions and services to our clients across the industry. 
+							<ul>
+								<li>Completed Summer Internship at Netcamp Solutions Pvt in Web Development.</li>
+								<li>Gained hands-on experience in frontend and backend development, working on real-world web projects.</li>
+								<li>Developed responsive and dynamic web applications using modern web technologies.</li>
+							</ul>
+						</p>
+                </div>
+                 <div>
+                    <span style="color: #ff0464; font-weight: 600;">March(2025)-April(2025)</span>
+                    <br>
+						<h2 style="color: white;">Internship</h2>
+                    <h2>Infosys Springboot</h2>
+                    <p class="mt-4">Infosys Springboot is a technology consulting and training based firm specializing in IT networking domain to provide solutions and services to our clients across the industry. 
+							<ul>
+								<li>Gained hands-on experience in Python Devloping working on real-world web projects.</li>
+								<li>Developed logic building and web technologies.</li>
+							</ul>
+						</p>
+                </div>
+            </div>
+            <br>
+            <h1 class="sub-title" style="text-align: center ; color: white;">Education</h1>
+            <div class="services-list">
+                <div>
+                    <span style="color: #ff0464; font-weight: 600;">2022-2025</span>
+                    <br>
+						<h2 style="color: white;">Master of Computer Aplication</h2>
+                   <span style="text-transform: uppercase;">Feroze Gandhi Institute of Engineering
+                     and Technology</span>
+                   <br>
+                   <br>
+                    <p >Grade: First class distinction.</p>
+                </div>
+                 <div>
+                    <span style="color: #ff0464; font-weight: 600;">2021-2023</span>
+                    <br>
+						<h2 style="color: white;">Bachelor of Science</h2>
+                    <span style="text-transform: uppercase;">Baisvara Degree College
+                     </span>
+                   <br>
+                   <br>
+                    <p >Grade: First class distinction.</p>
+                </div>
+                
+                <div>
+                    <span style="color: #ff0464; font-weight: 600;">2018-2019</span>
+                    <br>
+						<h2 style="color: white;">HighSchool</h2>
+                        <span style="text-transform: uppercase;">Chandrshekhar Memorial Public School. 
+                     </span>
+                   <br>
+                   <br>
+                    <p >Grade: First class distinction.</p>
+                  
+                </div>
+
+        </div>
+     </div>
+         <!--projects  -->
+       <div id="project">
+        <div class="container">
+             <h1 class="sub-title"style="text-align: center ; color: white;" >My Work</h1>
+             <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.png">
+                    <div class="layer">
+                        <h3>Food Delivery App</h3>
+                        <p> Our project is about making a Food Delivery Application. This app helps people order food from their favorite
+ restaurants and get it delivered to their doorstep</p>
+ <a href="https://food-delivery-front-7brx.onrender.com/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    </div>
+                    <div class="work">
+                     <img src="images/w2.png">
+                      <div class="layer">
+                        <h3>Cood Selling Application</h3>
+                        <p>A Course Selling Application allows educators to create, manage, and sell online courses to learners. 
+          Instructors can upload videos and course materials. Users can browse, purchase, and track their learning progress. </p>
+ <a href="https://course-selling-frontend-m03h.onrender.com/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    </div>
+                    <div class="work">
+                       <img src="images/works3.png">
+                        <div class="layer">
+                        <h3>Wander-lust</h3>
+                        <p>It is online marketplace that concepts who wants to rent out their home with people who are looking for accommo
+dations, typically for short days.Owners can upload multiple images for listings. </p>
+ <a href="https://wander-lust-project-8amq.onrender.com/listings"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    </div>      
+                </div>
+                <a href="#" class="btn">See more</a>
+             </div>
+        </div>
+       </div>
+
+       <!-- contact -->
+        <div id="contact" >
+            <div class="row">
+                <div class="contact-left">
+                 <h1 class="sub-title">Contact Me</h1>
+                 <p><i class="fa-solid fa-paper-plane"></i>
+                 naazb597@gmail.com</p>
+                 <p><i class="fa-solid fa-square-phone"></i> 91+ 6389389169</p>
+                 <div class="social-icons">
+                    <a href="https://web.telegram.org/a/NaazBano"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://x.com/BanoNaaz14445"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/naaz__rangrej/#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/naaz-bano-11262229"><i class="fa-brands fa-linkedin"></i></a>
+                 </div>
+                 
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email "required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2" >Submit</button>
+                    </form>
+                    <span id="msg">
+                    </span>
+
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright &#169 Naaz. Made with <i class="fa-solid fa-heart"></i> by Naaz</p>
+            </div>
+        </div>
+     <script>
+        var tablinks =document.getElementsByClassName("tab-links");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+
+            }
+          for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+                
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+     </script>
+     <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+            
+        }
+     </script>
+     <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbys47u986XYQ-kgJajuUVqvMyu7NvDvNu9SYt7Aq-p_EkKWdI0VEpXmcJeewb51iipUUw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML="Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML =" "
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
